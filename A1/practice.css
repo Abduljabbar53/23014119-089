@@ -1,0 +1,82 @@
+/* Inherit main styles */
+@import url('style.css');
+
+/* Practice page specific styles */
+.practice-header {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #2F8D46;
+    color: white;
+}
+
+.practice-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.problem-categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.problem-list {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 280px;
+    margin: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.problem-list h3 {
+    color: #2F8D46;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #FFC300;
+}
+
+.problem-list ul {
+    list-style: none;
+}
+
+.problem-list li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.problem-list a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.problem-list a:hover {
+    color: #2F8D46;
+}
+
+.difficulty {
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.easy {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.medium {
+    background-color: #FFC300;
+    color: #333;
+}
+
+.hard {
+    background-color: #F44336;
+    color: white;
+}

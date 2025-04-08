@@ -1,0 +1,91 @@
+/* Inherit main styles */
+@import url('style.css');
+
+/* Interview page specific styles */
+.interview-header {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #2F8D46;
+    color: white;
+}
+
+.interview-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.interview-resources {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.resource-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 280px;
+    margin: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card h3 {
+    color: #2F8D46;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #FFC300;
+}
+
+.resource-card ul {
+    list-style: none;
+}
+
+.resource-card li {
+    margin-bottom: 0.8rem;
+}
+
+.resource-card a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.resource-card a:hover {
+    color: #2F8D46;
+}
+
+.tips-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    margin: 2rem;
+    border-radius: 8px;
+}
+
+.tips-section h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2F8D46;
+}
+
+.tips-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tip-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 250px;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tip-card h4 {
+    color: #2F8D46;
+    margin-bottom: 0.5rem;
+}
