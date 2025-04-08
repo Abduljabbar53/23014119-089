@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeeksForGeeks Clone | Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2F8D46',
+                        secondary: '#FFC300',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-100 text-gray-800 leading-relaxed">
+    <!-- Header -->
+    <header class="bg-primary text-white px-8 py-4 flex justify-between items-center">
+        <div class="logo">
+            <h1 class="text-2xl font-bold">GeeksForGeeks</h1>
+        </div>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-white font-medium hover:text-secondary transition">Home</a></li>
+                <li><a href="tutorials.html" class="text-white font-medium hover:text-secondary transition">Tutorials</a></li>
+                <li><a href="courses.html" class="text-white font-medium hover:text-secondary transition">Courses</a></li>
+                <li><a href="practice.html" class="text-white font-medium hover:text-secondary transition">Practice</a></li>
+                <li><a href="interview.html" class="text-white font-medium hover:text-secondary transition">Interview Prep</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Practice Header -->
+    <section class="bg-primary text-center text-white py-12 px-4">
+        <h2 class="text-3xl font-bold mb-2">Coding Practice</h2>
+        <p class="text-xl">Sharpen your skills with our coding problems</p>
+    </section>
+
+    <!-- Problem Categories -->
+    <section class="flex justify-around py-8 px-4 flex-wrap">
+        <div class="bg-white p-6 rounded-lg shadow-md w-1/4 min-w-[300px] my-4">
+            <h3 class="text-xl font-bold text-primary mb-4 pb-2 border-b-2 border-secondary">Data Structures</h3>
+            <ul class="space-y-3">
+                <li class="flex justify-between items-center">
+                    <a href="#" class="text-gray-700 hover:text-primary transition">Array Problems</a>
+                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Easy</span>
+                </li>
+                <li class="flex justify-between items-center">
+                    <a href="#" class="text-gray-700 hover:text-primary transition">Linked List Problems</a>
+                    <span class="bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded">Medium</span>
+                </li>
+                <li class="flex justify-between items-center">
+                    <a href="#" class="text-gray-700 hover:text-primary transition">Tree Problems</a>
+                    <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">Hard</span>
+                </li>
+            </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md w-1/4 min-w-[300px] my-4">
+            <h3 class="text-xl font-bold text-primary mb-4 pb-2 border-b-2 border-secondary">Algorithms</h3>
+            <ul class="space-y-3">
+                <li class="flex justify-between items-center">
+                    <a href="#" class="text-gray-700 hover:text-primary transition">Sorting Problems</a>
+                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Easy</span>
+                </li>
+                <li class="flex justify-between items-center">
+                    <a href="#" class="text-gray-700 hover:text-primary transition">Searching Problems</a>
+                    <span class="bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded">Medium</span>
+                </li>
+                <li class="flex justify-between items-center">
+                    <a href="#" class="text-gray-700 hover:text-primary transition">Dynamic Programming</a>
+                    <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">Hard</span>
+                </li>
+            </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md w-1/4 min-w-[300px] my-4">
+            <h3 class="text-xl font-bold text-primary mb-4 pb-2 border-b-2 border-secondary">Language Specific</h3>
+            <ul class="space-y-3">
+                <li class="flex justify-between items-center">
+                    <a href="#" class="text-gray-700 hover:text-primary transition">Python Problems</a>
+                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Easy</span>
+                </li>
+                <li class="flex justify-between items-center">
+                    <a href="#" class="text-gray-700 hover:text-primary transition">Java Problems</a>
+                    <span class="bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded">Medium</span>
+                </li>
+                <li class="flex justify-between items-center">
+                    <a href="#" class="text-gray-700 hover:text-primary transition">C++ Problems</a>
+                    <span class="bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded">Medium</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-8">
+        <p>&copy; 2023 GeeksForGeeks Clone. All rights reserved.</p>
+    </footer>
+</body>
+</html>

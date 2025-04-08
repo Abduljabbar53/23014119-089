@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeeksForGeeks Clone | Interview Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2F8D46',
+                        secondary: '#FFC300',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-100 text-gray-800 leading-relaxed">
+    <!-- Header -->
+    <header class="bg-primary text-white px-8 py-4 flex justify-between items-center">
+        <div class="logo">
+            <h1 class="text-2xl font-bold">GeeksForGeeks</h1>
+        </div>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-white font-medium hover:text-secondary transition">Home</a></li>
+                <li><a href="tutorials.html" class="text-white font-medium hover:text-secondary transition">Tutorials</a></li>
+                <li><a href="courses.html" class="text-white font-medium hover:text-secondary transition">Courses</a></li>
+                <li><a href="practice.html" class="text-white font-medium hover:text-secondary transition">Practice</a></li>
+                <li><a href="interview.html" class="text-white font-medium hover:text-secondary transition">Interview Prep</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Interview Header -->
+    <section class="bg-primary text-center text-white py-12 px-4">
+        <h2 class="text-3xl font-bold mb-2">Interview Preparation</h2>
+        <p class="text-xl">Ace your technical interviews with our resources</p>
+    </section>
+
+    <!-- Interview Resources -->
+    <section class="flex justify-around py-8 px-4 flex-wrap">
+        <div class="bg-white p-6 rounded-lg shadow-md w-1/4 min-w-[300px] my-4">
+            <h3 class="text-xl font-bold text-primary mb-4 pb-2 border-b-2 border-secondary">Company Wise Preparation</h3>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-gray-700 hover:text-primary transition">Amazon Interview Questions</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-primary transition">Google Interview Questions</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-primary transition">Microsoft Interview Questions</a></li>
+            </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md w-1/4 min-w-[300px] my-4">
+            <h3 class="text-xl font-bold text-primary mb-4 pb-2 border-b-2 border-secondary">Interview Experiences</h3>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-gray-700 hover:text-primary transition">SDE Internship Experiences</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-primary transition">Full Time SDE Experiences</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-primary transition">Product Manager Interviews</a></li>
+            </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md w-1/4 min-w-[300px] my-4">
+            <h3 class="text-xl font-bold text-primary mb-4 pb-2 border-b-2 border-secondary">System Design</h3>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-gray-700 hover:text-primary transition">Basic System Design Concepts</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-primary transition">Design Twitter</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-primary transition">Design Uber</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Interview Tips -->
+    <section class="bg-gray-50 py-8 px-8 mx-8 rounded-lg">
+        <h3 class="text-2xl font-bold text-primary text-center mb-8">Interview Tips</h3>
+        <div class="flex justify-around flex-wrap">
+            <div class="bg-white p-6 rounded-lg shadow-sm w-1/4 min-w-[250px] my-4">
+                <h4 class="text-lg font-bold text-primary mb-2">Technical Round</h4>
+                <p class="text-gray-600">Focus on problem-solving approach. Explain your thought process clearly.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm w-1/4 min-w-[250px] my-4">
+                <h4 class="text-lg font-bold text-primary mb-2">HR Round</h4>
+                <p class="text-gray-600">Be prepared to discuss your projects and why you want to work for the company.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm w-1/4 min-w-[250px] my-4">
+                <h4 class="text-lg font-bold text-primary mb-2">Behavioral Questions</h4>
+                <p class="text-gray-600">Use the STAR method (Situation, Task, Action, Result) to structure your answers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-8">
+        <p>&copy; 2023 GeeksForGeeks Clone. All rights reserved.</p>
+    </footer>
+</body>
+</html>
