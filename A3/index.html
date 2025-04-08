@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .demo-section {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .danger-btn {
+            background-color: #e74c3c;
+        }
+        .danger-btn:hover {
+            background-color: #c0392b;
+        }
+        .success-btn {
+            background-color: #2ecc71;
+        }
+        .success-btn:hover {
+            background-color: #27ae60;
+        }
+        #bulbImage {
+            display: block;
+            margin: 15px auto;
+            height: 150px;
+        }
+        .hover-div {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #9b59b6;
+            color: white;
+            border-radius: 4px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .hover-div:hover {
+            background-color: #8e44ad;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Functions Implementation</h1>
+
+    <!-- 1. Basic Text Change -->
+    <div class="demo-section">
+        <h2>1. Basic Text Change</h2>
+        <p id="paraID">Original Paragraph Text</p>
+        <button onclick="document.getElementById('paraID').innerHTML = 'New Text'">Change Text (Inline)</button>
+        <button onclick="document.getElementById('paraID').innerHTML = 'Original Paragraph Text'">Reset Text (Inline)</button>
+        <button onclick="setAsNewText()">Change Text (Function)</button>
+        <button onclick="setAsParagraph()">Reset Text (Function)</button>
+    </div>
+
+    <!-- 2. Multiple Elements by Class -->
+    <div class="demo-section">
+        <h2>2. Multiple Elements by Class</h2>
+        <p class="paraClass">Paragraph 1</p>
+        <p class="paraClass">Paragraph 2</p>
+        <p class="paraClass">Paragraph 3</p>
+        <button onclick="changeAllByClass()">Change All Paragraphs</button>
+        <button onclick="resetAllByClass()">Reset All Paragraphs</button>
+    </div>
+
+    <!-- 3. Multiple Elements by Tag -->
+    <div class="demo-section">
+        <h2>3. Multiple Elements by Tag</h2>
+        <p>First paragraph by tag</p>
+        <p>Second paragraph by tag</p>
+        <p>Third paragraph by tag</p>
+        <button onclick="changeAllByTag()">Change All &lt;p&gt; Elements</button>
+        <button onclick="resetAllByTag()">Reset All &lt;p&gt; Elements</button>
+    </div>
+
+    <!-- 4. Image Source Change -->
+    <div class="demo-section">
+        <h2>4. Image Source Change</h2>
+        <img id="bulbImage" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Light bulb">
+        <button onclick="turnOnLight()">Turn On the Light</button>
+        <button onclick="turnOffLight()">Turn Off the Light</button>
+    </div>
+
+    <!-- 5. Style Modification - Font Size -->
+    <div class="demo-section">
+        <h2>5. Style Modification - Font Size</h2>
+        <p id="fontSizeDemo">Watch my font size change</p>
+        <button onclick="increaseFontSize()">Increase Font Size</button>
+        <button onclick="normalFontSize()">Normal Font Size</button>
+    </div>
+
+    <!-- 6. Style Modification - Visibility -->
+    <div class="demo-section">
+        <h2>6. Style Modification - Visibility</h2>
+        <p id="visibilityDemo">This element can be hidden/shown</p>
+        <button class="danger-btn" onclick="hideElement()">Hide Element</button>
+        <button class="success-btn" onclick="showElement()">Show Element</button>
+    </div>
+
+    <!-- 7. Mouse Events - Button -->
+    <div class="demo-section">
+        <h2>7. Mouse Events - Button</h2>
+        <button id="hoverButton" 
+                onmouseover="buttonMouseOver()" 
+                onmouseout="buttonMouseOut()">
+            Mouse Over Me
+        </button>
+    </div>
+
+    <!-- 8. Mouse Events - Div -->
+    <div class="demo-section">
+        <h2>8. Mouse Events - Div</h2>
+        <div class="hover-div" 
+             onmouseover="divMouseOver(this)" 
+             onmouseout="divMouseOut(this)">
+            Mouse Over This Div
+        </div>
+    </div>
+
+    <!-- 9. Multiple Functions for Class -->
+    <div class="demo-section">
+        <h2>9. Multiple Functions for Class (External JS)</h2>
+        <p class="multiClass">First element</p>
+        <p class="multiClass">Second element</p>
+        <p class="multiClass">Third element</p>
+        <button onclick="changeMultiClass()">Change All</button>
+        <button onclick="resetMultiClass()">Reset All</button>
+    </div>
+
+    <!-- 10. Multiple Functions for Tag -->
+    <div class="demo-section">
+        <h2>10. Multiple Functions for Tag (External JS)</h2>
+        <span>First span</span><br>
+        <span>Second span</span><br>
+        <span>Third span</span>
+        <button onclick="changeAllSpans()">Change All &lt;span&gt;</button>
+        <button onclick="resetAllSpans()">Reset All &lt;span&gt;</button>
+    </div>
+
+    <script>
+        // 1. Basic Text Change Functions
+        function setAsNewText() {
+            document.getElementById('paraID').innerHTML = 'New Text from Function';
+        }
+        function setAsParagraph() {
+            document.getElementById('paraID').innerHTML = 'Original Paragraph Text';
+        }
+
+        // 2. Multiple Elements by Class
+        function changeAllByClass() {
+            let elements = document.getElementsByClassName("paraClass");
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].innerHTML = "Changed by class " + (i+1);
+            }
+        }
+        function resetAllByClass() {
+            let elements = document.getElementsByClassName('paraClass');
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].innerHTML = 'Paragraph ' + (i+1);
+            }
+        }
+
+        // 3. Multiple Elements by Tag
+        function changeAllByTag() {
+            let elements = document.getElementsByTagName("p");
+            for (let i = 0; i < elements.length; i++) {
+                // Skip paragraphs in other sections
+                if (!elements[i].className && !elements[i].id) {
+                    elements[i].innerHTML = "Changed by tag " + (i+1);
+                }
+            }
+        }
+        function resetAllByTag() {
+            let elements = document.getElementsByTagName('p');
+            for (let i = 0; i < elements.length; i++) {
+                if (!elements[i].className && !elements[i].id) {
+                    if (i === 0) elements[i].innerHTML = 'First paragraph by tag';
+                    else if (i === 1) elements[i].innerHTML = 'Second paragraph by tag';
+                    else if (i === 2) elements[i].innerHTML = 'Third paragraph by tag';
+                }
+            }
+        }
+
+        // 4. Image Source Change
+        function turnOnLight() {
+            document.getElementById('bulbImage').src = 'https://www.w3schools.com/js/pic_bulbon.gif';
+        }
+        function turnOffLight() {
+            document.getElementById('bulbImage').src = 'https://www.w3schools.com/js/pic_bulboff.gif';
+        }
+
+        // 5. Style Modification - Font Size
+        function increaseFontSize() {
+            document.getElementById('fontSizeDemo').style.fontSize = '24px';
+        }
+        function normalFontSize() {
+            document.getElementById('fontSizeDemo').style.fontSize = '16px';
+        }
+
+        // 6. Style Modification - Visibility
+        function hideElement() {
+            document.getElementById('visibilityDemo').style.display = 'none';
+        }
+        function showElement() {
+            document.getElementById('visibilityDemo').style.display = 'block';
+        }
+
+        // 7. Mouse Events - Button
+        function buttonMouseOver() {
+            document.getElementById('hoverButton').innerHTML = 'Hello!';
+        }
+        function buttonMouseOut() {
+            document.getElementById('hoverButton').innerHTML = 'Mouse Over Me';
+        }
+
+        // 8. Mouse Events - Div
+        function divMouseOver(element) {
+            element.innerHTML = 'Thank You!';
+            element.style.backgroundColor = '#16a085';
+        }
+        function divMouseOut(element) {
+            element.innerHTML = 'Mouse Over This Div';
+            element.style.backgroundColor = '#9b59b6';
+        }
+
+        // 9. Multiple Functions for Class
+        function changeMultiClass() {
+            let elements = document.getElementsByClassName("multiClass");
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].innerHTML = "Multi Changed " + (i+1);
+                elements[i].style.color = "#e74c3c";
+            }
+        }
+        function resetMultiClass() {
+            let elements = document.getElementsByClassName('multiClass');
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].innerHTML = (i === 0 ? "First" : i === 1 ? "Second" : "Third") + " element";
+                elements[i].style.color = "";
+            }
+        }
+
+        // 10. Multiple Functions for Tag
+        function changeAllSpans() {
+            let elements = document.getElementsByTagName("span");
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].innerHTML = "Span Changed " + (i+1);
+                elements[i].style.fontWeight = "bold";
+            }
+        }
+        function resetAllSpans() {
+            let elements = document.getElementsByTagName('span');
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].innerHTML = (i === 0 ? "First" : i === 1 ? "Second" : "Third") + " span";
+                elements[i].style.fontWeight = "";
+            }
+        }
+    </script>
+</body>
+</html>
